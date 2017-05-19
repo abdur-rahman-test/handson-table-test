@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="emailDatabase">
+    <head>
+        <title>Email Database</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+
+            .handsontable td, .handsontable th{
+                border-right: 0px !important;
+                border-bottom: 0px !important;
+                text-align: center;
+            }
+
+            .handsontable tr:first-child td, .handsontable tr:first-child th{
+                border-top:0px !important;
+            }
+
+            .handsontable table.htCore{
+                border-collapse: collapse !important;
+            }
+        </style>
+        
+        <!-- load angular via CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.4/angular-resource.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.css">
+        <link rel="stylesheet" type="text/css" href="http://handsontable.com/static/css/main.css">
+        <script src="http://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <script src="app.js"></script>
+        <script src="routes.js"></script>
+        <script src="models/emailDbView.js"></script>
+        <script src="services/emailSearchList.js"></script>
+        <script src="services/emailListService.js"></script>
+        <script src="controllers.js"></script>
+    </head>
+    <body>
+
+       <!--  <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Email Database</a>
+				</div>
+			</div>
+			</nav>
+		</header> -->
+
+        <div class="container">
+
+            <div ng-view></div>
+
+		</div>
+
+    </body>
+</html>
